@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="protectorr" default="all">
+  
+  
+  <property file="protectorr.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/.pyc/**"/>
+    <exclude name="**/.pyo/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/*.lib/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/.bundle/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.ear"/>
+    <include name="*.apk"/>
+    <include name="*.zip"/>
+    <include name="*.swc"/>
+    <include name="*.ane"/>
+    <include name="*.egg"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="lib/ant-javafx.jar"/>
+      <include name="lib/dt.jar"/>
+      <include name="lib/javafx-mx.jar"/>
+      <include name="lib/jconsole.jar"/>
+      <include name="lib/sa-jdi.jar"/>
+      <include name="lib/tools.jar"/>
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.com.itextpdf:itextpdf:5.5.4.classpath">
+    <pathelement location="${basedir}/lib/itextpdf-5.5.4.jar"/>
+  </path>
+  
+  <path id="library.commons-io:commons-io:2.4.classpath">
+    <pathelement location="${basedir}/lib/commons-io-2.4.jar"/>
+  </path>
+  
+  <path id="library.de.jensd:fontawesomefx:8.0.13.classpath">
+    <pathelement location="${basedir}/lib/fontawesomefx-8.0.13.jar"/>
+  </path>
+  
+  <path id="library.org.apache.santuario:xmlsec:1.5.1.classpath">
+    <pathelement location="${basedir}/lib/commons-logging-1.1.1.jar"/>
+    <pathelement location="${basedir}/lib/xmlsec-1.5.1.jar"/>
+  </path>
+  
+  <path id="library.org.bouncycastle:bcmail-jdk16:1.46.classpath">
+    <pathelement location="${basedir}/lib/bcmail-jdk16-1.46.jar"/>
+    <pathelement location="${basedir}/lib/bcprov-jdk16-1.46.jar"/>
+  </path>
+  
+  <path id="library.org.bouncycastle:bcpkix-jdk15on:1.49.classpath">
+    <pathelement location="${basedir}/lib/bcpkix-jdk15on-1.49.jar"/>
+    <pathelement location="${basedir}/lib/bcprov-jdk15on-1.49.jar"/>
+  </path>
+  
+  <path id="library.org.bouncycastle:bcprov-jdk15on:1.49.classpath">
+    <pathelement location="${basedir}/lib/bcprov-jdk15on-1.49.jar"/>
+  </path>
+  
+  <path id="library.org.bouncycastle:bctsp-jdk16:1.46.classpath">
+    <pathelement location="${basedir}/lib/bcmail-jdk16-1.46.jar"/>
+    <pathelement location="${basedir}/lib/bcprov-jdk16-1.46.jar"/>
+    <pathelement location="${basedir}/lib/bctsp-jdk16-1.46.jar"/>
+  </path>
+  
+  <path id="library.pdfcorr.classpath">
+    <pathelement location="${basedir}/../pdfcorr/build/libs/pdfcorr.jar"/>
+  </path>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module protectorr -->
+  
+  <dirname property="module.protectorr.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.protectorr" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.protectorr" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.protectorr" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.protectorr" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="protectorr.output.dir" value="${module.protectorr.basedir}/out/production/protectorr"/>
+  <property name="protectorr.testoutput.dir" value="${module.protectorr.basedir}/out/test/protectorr"/>
+  
+  <path id="protectorr.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="protectorr.module.production.classpath">
+    <path refid="${module.jdk.classpath.protectorr}"/>
+    <path refid="library.de.jensd:fontawesomefx:8.0.13.classpath"/>
+    <path refid="library.commons-io:commons-io:2.4.classpath"/>
+    <pathelement location="${basedir}/../pdfcorr/build/libs/pdfcorr.jar"/>
+    <path refid="library.pdfcorr.classpath"/>
+    <path refid="library.com.itextpdf:itextpdf:5.5.4.classpath"/>
+    <path refid="library.org.bouncycastle:bcmail-jdk16:1.46.classpath"/>
+    <path refid="library.org.bouncycastle:bcprov-jdk15on:1.49.classpath"/>
+    <path refid="library.org.bouncycastle:bctsp-jdk16:1.46.classpath"/>
+    <path refid="library.org.bouncycastle:bcpkix-jdk15on:1.49.classpath"/>
+    <path refid="library.org.apache.santuario:xmlsec:1.5.1.classpath"/>
+  </path>
+  
+  <path id="protectorr.runtime.production.module.classpath">
+    <pathelement location="${protectorr.output.dir}"/>
+    <path refid="library.de.jensd:fontawesomefx:8.0.13.classpath"/>
+    <path refid="library.commons-io:commons-io:2.4.classpath"/>
+    <pathelement location="${basedir}/../pdfcorr/build/libs/pdfcorr.jar"/>
+    <path refid="library.pdfcorr.classpath"/>
+    <path refid="library.com.itextpdf:itextpdf:5.5.4.classpath"/>
+    <path refid="library.org.bouncycastle:bcmail-jdk16:1.46.classpath"/>
+    <path refid="library.org.bouncycastle:bcprov-jdk15on:1.49.classpath"/>
+    <path refid="library.org.bouncycastle:bctsp-jdk16:1.46.classpath"/>
+    <path refid="library.org.bouncycastle:bcpkix-jdk15on:1.49.classpath"/>
+    <path refid="library.org.apache.santuario:xmlsec:1.5.1.classpath"/>
+  </path>
+  
+  <path id="protectorr.module.classpath">
+    <path refid="${module.jdk.classpath.protectorr}"/>
+    <pathelement location="${protectorr.output.dir}"/>
+    <path refid="library.de.jensd:fontawesomefx:8.0.13.classpath"/>
+    <path refid="library.commons-io:commons-io:2.4.classpath"/>
+    <pathelement location="${basedir}/../pdfcorr/build/libs/pdfcorr.jar"/>
+    <path refid="library.pdfcorr.classpath"/>
+    <path refid="library.com.itextpdf:itextpdf:5.5.4.classpath"/>
+    <path refid="library.org.bouncycastle:bcmail-jdk16:1.46.classpath"/>
+    <path refid="library.org.bouncycastle:bcprov-jdk15on:1.49.classpath"/>
+    <path refid="library.org.bouncycastle:bctsp-jdk16:1.46.classpath"/>
+    <path refid="library.org.bouncycastle:bcpkix-jdk15on:1.49.classpath"/>
+    <path refid="library.org.apache.santuario:xmlsec:1.5.1.classpath"/>
+  </path>
+  
+  <path id="protectorr.runtime.module.classpath">
+    <pathelement location="${protectorr.testoutput.dir}"/>
+    <pathelement location="${protectorr.output.dir}"/>
+    <path refid="library.de.jensd:fontawesomefx:8.0.13.classpath"/>
+    <path refid="library.commons-io:commons-io:2.4.classpath"/>
+    <pathelement location="${basedir}/../pdfcorr/build/libs/pdfcorr.jar"/>
+    <path refid="library.pdfcorr.classpath"/>
+    <path refid="library.com.itextpdf:itextpdf:5.5.4.classpath"/>
+    <path refid="library.org.bouncycastle:bcmail-jdk16:1.46.classpath"/>
+    <path refid="library.org.bouncycastle:bcprov-jdk15on:1.49.classpath"/>
+    <path refid="library.org.bouncycastle:bctsp-jdk16:1.46.classpath"/>
+    <path refid="library.org.bouncycastle:bcpkix-jdk15on:1.49.classpath"/>
+    <path refid="library.org.apache.santuario:xmlsec:1.5.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.protectorr">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.protectorr">
+    <patternset refid="excluded.from.module.protectorr"/>
+  </patternset>
+  
+  <path id="protectorr.module.sourcepath">
+    <dirset dir="${module.protectorr.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.protectorr" depends="compile.module.protectorr.production,compile.module.protectorr.tests" description="Compile module protectorr"/>
+  
+  <target name="compile.module.protectorr.production" description="Compile module protectorr; production classes">
+    <mkdir dir="${protectorr.output.dir}"/>
+    <javac destdir="${protectorr.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.protectorr}/javac">
+      <compilerarg line="${compiler.args.protectorr}"/>
+      <bootclasspath refid="protectorr.module.bootclasspath"/>
+      <classpath refid="protectorr.module.production.classpath"/>
+      <src refid="protectorr.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.protectorr"/>
+    </javac>
+    
+    <copy todir="${protectorr.output.dir}">
+      <fileset dir="${module.protectorr.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.protectorr.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.protectorr.tests" depends="compile.module.protectorr.production" description="compile module protectorr; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.protectorr" description="cleanup module">
+    <delete dir="${protectorr.output.dir}"/>
+    <delete dir="${protectorr.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.protectorr, clean.artifact.protectorr" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.protectorr" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/temp"/>
+    <property name="artifact.output.protectorr" value="${basedir}/out/artifacts/Protectorr"/>
+    <property name="artifact.output.protectorr.dist.dir" value="${basedir}/out/artifacts/dist/Protectorr"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="artifact.temp.output." value="${artifacts.temp.dir}/"/>
+    <taskdef resource="com/sun/javafx/tools/ant/antlib.xml" uri="javafx:com.sun.javafx.tools.ant" classpath=".:${jdk.home.1.8}/lib/ant-javafx.jar"/>
+  </target>
+  
+  <target name="clean.artifact.protectorr" description="clean Protectorr artifact output">
+    <delete dir="${artifact.output.protectorr}"/>
+    <delete dir="${artifact.output.protectorr.dist.dir}"/>
+  </target>
+  
+  <target name="artifact.protectorr" depends="init.artifacts, compile.module.protectorr" description="Build &#39;Protectorr&#39; artifact" xmlns:fx="javafx:com.sun.javafx.tools.ant">
+    <mkdir dir="${artifact.output.protectorr}"/>
+    <mkdir dir="${artifact.output.protectorr.dist.dir}" />
+    <copy todir="${artifact.temp.output.}">
+      <fileset dir="${protectorr.output.dir}"/>
+    </copy>
+    <copy file="${basedir}/lib/fontawesomefx-8.0.13.jar" tofile="${artifact.temp.output.}/fontawesomefx-8.0.13.jar"/>
+    <copy file="${basedir}/lib/commons-io-2.4.jar" tofile="${artifact.temp.output.}/commons-io-2.4.jar"/>
+    <copy file="${basedir}/../pdfcorr/build/libs/pdfcorr.jar" tofile="${artifact.temp.output.}/pdfcorr.jar"/>
+    <copy file="${basedir}/../pdfcorr/build/libs/pdfcorr.jar" tofile="${artifact.temp.output.}/pdfcorr.jar"/>
+    <copy file="${basedir}/lib/itextpdf-5.5.4.jar" tofile="${artifact.temp.output.}/itextpdf-5.5.4.jar"/>
+    <copy file="${basedir}/lib/bcmail-jdk16-1.46.jar" tofile="${artifact.temp.output.}/bcmail-jdk16-1.46.jar"/>
+    <copy file="${basedir}/lib/bcprov-jdk16-1.46.jar" tofile="${artifact.temp.output.}/bcprov-jdk16-1.46.jar"/>
+    <copy file="${basedir}/lib/bcprov-jdk15on-1.49.jar" tofile="${artifact.temp.output.}/bcprov-jdk15on-1.49.jar"/>
+    <copy file="${basedir}/lib/bctsp-jdk16-1.46.jar" tofile="${artifact.temp.output.}/bctsp-jdk16-1.46.jar"/>
+    <copy file="${basedir}/lib/bcprov-jdk16-1.46.jar" tofile="${artifact.temp.output.}/bcprov-jdk16-1.46.jar"/>
+    <copy file="${basedir}/lib/bcmail-jdk16-1.46.jar" tofile="${artifact.temp.output.}/bcmail-jdk16-1.46.jar"/>
+    <copy file="${basedir}/lib/bcpkix-jdk15on-1.49.jar" tofile="${artifact.temp.output.}/bcpkix-jdk15on-1.49.jar"/>
+    <copy file="${basedir}/lib/bcprov-jdk15on-1.49.jar" tofile="${artifact.temp.output.}/bcprov-jdk15on-1.49.jar"/>
+    <copy file="${basedir}/lib/xmlsec-1.5.1.jar" tofile="${artifact.temp.output.}/xmlsec-1.5.1.jar"/>
+    <copy file="${basedir}/lib/commons-logging-1.1.1.jar" tofile="${artifact.temp.output.}/commons-logging-1.1.1.jar"/>
+    <fx:fileset id="all_but_" dir="${artifact.temp.output.}" includes="**/*.jar">
+      <exclude name=""/>
+    </fx:fileset>
+    <fx:fileset id="all_" dir="${artifact.temp.output.}" includes="**/*.jar"/>
+    <fx:application id="_id" name="Protectorr" mainClass="protectorr.app.Main"/>
+    <fx:jar destfile="${artifact.temp.output.}/protectorr.jar">
+      <fx:application refid="_id"/>
+      <fileset dir="${artifact.temp.output.}" excludes="**/*.jar"/>
+      <fx:resources>
+        <fx:fileset refid="all_but_"/>
+      </fx:resources>
+      <manifest/>
+    </fx:jar>
+      <!--build for distribution via app store-->
+    <fx:deploy width="600" height="400"
+             nativeBundles="dmg"
+             outdir="${artifact.output.protectorr.dist.dir}" outfile="Protectorr" verbose="true">
+      <fx:application refid="_id"/>
+      <fx:resources>
+          <fx:fileset dir="${artifact.temp.output.}" includes="*.jar"/>
+      </fx:resources>
+        <fx:info title="Protectorr" vendor="Devcorr Technologies, LLC"/>
+    </fx:deploy>
+      <!--build for testing-->
+    <fx:deploy width="600" height="400" updatemode="background" outdir="${artifact.temp.output.}/deploy" outfile="">
+      <fx:application refid="_id"/>
+      <fx:info title="Protectorr" vendor="Devcorr Technologies, LLC"/>
+      <fx:resources>
+        <fx:fileset refid="all_"/>
+      </fx:resources>
+    </fx:deploy>
+    <copy todir="${artifact.output.protectorr}">
+      <fileset dir="${artifact.temp.output.}/deploy"/>
+    </copy>
+    <delete includeemptydirs="true">
+      <fileset dir="${artifact.temp.output.}"/>
+    </delete>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.protectorr" description="Build all artifacts">
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>

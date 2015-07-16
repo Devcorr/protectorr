@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import de.jensd.fx.fontawesome.*?>
+
+<GridPane fx:id="mainWindow" alignment="CENTER" hgap="10.0" prefHeight="366.0" prefWidth="552.0" styleClass="root" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="protectorr.controllers.ProtectionController">
+
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+
+    <padding><Insets bottom="5" left="5" right="5" top="5" /></padding>
+    <children>
+        <HBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="0">
+            <children>
+                <Text styleClass="welcome-text" text="Protectorr" />
+            </children>
+        </HBox>
+
+        <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <children>
+                <Icon awesomeIcon="FOLDER_OPEN_ALT" onMouseClicked="#handleOpenFileAction" size="7em" style="-fx-font-size: 7em; -fx-text-fill: #bc5e0b;" styleClass="" />
+            </children>
+        </HBox>
+
+        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <children>
+                <Text style="-fx-font-size: 1.5em;" text="Open" />
+            </children>
+        </HBox>
+
+        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <children>
+                <Text fx:id="message" wrappingWidth="200.0" />
+            </children>
+        </HBox>
+
+        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <children>
+                <Icon fx:id="pdfIcon" awesomeIcon="FILE_PDF_ALT" size="4em" style="-fx-font-size: 4em; -fx-text-fill: #bc5e0b; -fx-opacity: 1;" styleClass="" visible="false" />
+                <Text fx:id="pdfToProtectName" wrappingWidth="200.0">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </Text>
+            </children>
+        </HBox>
+
+        <Label styleClass="password-label" text="Password:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+        <PasswordField fx:id="passwordField" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+
+        <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="3" GridPane.rowIndex="6">
+        <children>
+              <Button onAction="#handleProtectPdfFileAction" prefHeight="26.0" prefWidth="100.0" styleClass="protect-button" text="Protect" />
+        </children>
+        </HBox>
+
+        <HBox alignment="TOP_CENTER" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="logo">
+                    <image>
+                        <Image url="/retinaBlogLogo.png" />
+                    </image>
+                </ImageView>
+                <Icon fx:id="gitHubIcon" awesomeIcon="GITHUB_ALT" onMouseClicked="#handleBrowseGithubAction" size="3em" style="-fx-font-size: 3em; -fx-text-fill: #bc5e0b;" styleClass="" />
+            </children>
+        </HBox>
+
+
+    </children>
+    <columnConstraints>
+        <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+
+</GridPane>

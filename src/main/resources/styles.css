@@ -1,0 +1,57 @@
+.root {
+    -fx-background-color: #FFFFFF;
+    -fx-font-family: "Helvetica-Neue", Helvetica, Arial;
+}
+
+.welcome-text {
+    -fx-font-size: 5em;
+    -fx-font-weight: bold;
+}
+
+.not-visible {
+    -fx-opacity: 0;
+}
+
+.visible {
+    -fx-opacity: 1;
+}
+
+.password-label {
+    -fx-font-size: 1.5em;
+}
+
+.password-field {
+    -fx-font-size: 1.5em;
+}
+
+.protect-button {
+    -fx-background-color: #bc5e0b;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 1.5em;
+}
+
+.text-field {
+    -fx-background-color:
+    #909090,
+    #FFFFFF;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 0, 0;
+}
+
+.text-field:focused {
+    -fx-background-color:
+    #bc5e0b,
+    #FFFFFF;
+}
+
+.text-field:hover {
+    -fx-background-color:
+    #909090,
+    #FFFFFF;
+}
+
+.text-field:focused:hover {
+    -fx-background-color:
+    #bc5e0b,
+    #FFFFFF;
+}
