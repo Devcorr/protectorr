@@ -64,7 +64,7 @@
 
         <HBox alignment="TOP_CENTER" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="7">
             <children>
-                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="logo">
+                <ImageView fx:id="devcorrLogo" onMouseClicked="#handleBrowseDevcorrAction" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="logo">
                     <image>
                         <Image url="/retinaBlogLogo.png" />
                     </image>

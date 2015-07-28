@@ -72,8 +72,13 @@ public class ProtectionController {
 
     @FXML
     protected void handleBrowseGithubAction() {
-        System.out.println("Github icon pressed");
-        String url = "https://github.com/Devcorr/pdfcorr";
+        String url = "https://github.com/Devcorr/protectorr";
+        openURLinDefaultBrowser(url);
+    }
+
+    @FXML
+    protected void handleBrowseDevcorrAction() {
+        String url = "http://devcorr.com";
         openURLinDefaultBrowser(url);
     }
 
