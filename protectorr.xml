@@ -329,6 +329,7 @@
              outdir="${artifact.output.protectorr.dist.dir}" outfile="Protectorr" verbose="true">
       <fx:application refid="_id"/>
       <fx:bundleArgument arg="mac.CFBundleVersion" value="1.0"/>
+      <fx:bundleArgument arg="mac.CFBundleIdentifier" value="com.devcorr.protectorr"/>
       <fx:resources>
           <fx:fileset dir="${artifact.temp.output.}" includes="*.jar"/>
       </fx:resources>
