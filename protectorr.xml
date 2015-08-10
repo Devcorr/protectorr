@@ -330,6 +330,8 @@
       <fx:application refid="_id"/>
       <fx:bundleArgument arg="mac.CFBundleVersion" value="1.0"/>
       <fx:bundleArgument arg="mac.CFBundleIdentifier" value="com.devcorr.protectorr"/>
+      <fx:bundleArgument arg="mac.category" value="Productivity"/>
+      <fx:bundleArgument arg="mac.bundle-id-signing-prefix" value="8QZAF9V488ID"/>
       <fx:resources>
           <fx:fileset dir="${artifact.temp.output.}" includes="*.jar"/>
       </fx:resources>
