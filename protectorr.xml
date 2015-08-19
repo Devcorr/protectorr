@@ -99,8 +99,8 @@
   
   <!-- Project Libraries -->
   
-  <path id="library.com.itextpdf:itextpdf:5.5.4.classpath">
-    <pathelement location="${basedir}/lib/itextpdf-5.5.4.jar"/>
+  <path id="library.com.itextpdf:itextpdf:5.5.6.classpath">
+    <pathelement location="${basedir}/lib/itextpdf-5.5.6.jar"/>
   </path>
   
   <path id="library.commons-io:commons-io:2.4.classpath">
@@ -121,13 +121,13 @@
     <pathelement location="${basedir}/lib/bcprov-jdk16-1.46.jar"/>
   </path>
   
-  <path id="library.org.bouncycastle:bcpkix-jdk15on:1.49.classpath">
-    <pathelement location="${basedir}/lib/bcpkix-jdk15on-1.49.jar"/>
-    <pathelement location="${basedir}/lib/bcprov-jdk15on-1.49.jar"/>
+  <path id="library.org.bouncycastle:bcpkix-jdk15on:1.52.classpath">
+    <pathelement location="${basedir}/lib/bcpkix-jdk15on-1.52.jar"/>
+    <pathelement location="${basedir}/lib/bcprov-jdk15on-1.52.jar"/>
   </path>
   
-  <path id="library.org.bouncycastle:bcprov-jdk15on:1.49.classpath">
-    <pathelement location="${basedir}/lib/bcprov-jdk15on-1.49.jar"/>
+  <path id="library.org.bouncycastle:bcprov-jdk15on:1.52.classpath">
+    <pathelement location="${basedir}/lib/bcprov-jdk15on-1.52.jar"/>
   </path>
   
   <path id="library.org.bouncycastle:bctsp-jdk16:1.46.classpath">
@@ -167,11 +167,11 @@
     <path refid="library.commons-io:commons-io:2.4.classpath"/>
     <pathelement location="${basedir}/../pdfcorr/build/libs/pdfcorr.jar"/>
     <path refid="library.pdfcorr.classpath"/>
-    <path refid="library.com.itextpdf:itextpdf:5.5.4.classpath"/>
+    <path refid="library.com.itextpdf:itextpdf:5.5.6.classpath"/>
     <path refid="library.org.bouncycastle:bcmail-jdk16:1.46.classpath"/>
-    <path refid="library.org.bouncycastle:bcprov-jdk15on:1.49.classpath"/>
+    <path refid="library.org.bouncycastle:bcprov-jdk15on:1.52.classpath"/>
     <path refid="library.org.bouncycastle:bctsp-jdk16:1.46.classpath"/>
-    <path refid="library.org.bouncycastle:bcpkix-jdk15on:1.49.classpath"/>
+    <path refid="library.org.bouncycastle:bcpkix-jdk15on:1.52.classpath"/>
     <path refid="library.org.apache.santuario:xmlsec:1.5.1.classpath"/>
   </path>
   
@@ -181,11 +181,11 @@
     <path refid="library.commons-io:commons-io:2.4.classpath"/>
     <pathelement location="${basedir}/../pdfcorr/build/libs/pdfcorr.jar"/>
     <path refid="library.pdfcorr.classpath"/>
-    <path refid="library.com.itextpdf:itextpdf:5.5.4.classpath"/>
+    <path refid="library.com.itextpdf:itextpdf:5.5.6.classpath"/>
     <path refid="library.org.bouncycastle:bcmail-jdk16:1.46.classpath"/>
-    <path refid="library.org.bouncycastle:bcprov-jdk15on:1.49.classpath"/>
+    <path refid="library.org.bouncycastle:bcprov-jdk15on:1.52.classpath"/>
     <path refid="library.org.bouncycastle:bctsp-jdk16:1.46.classpath"/>
-    <path refid="library.org.bouncycastle:bcpkix-jdk15on:1.49.classpath"/>
+    <path refid="library.org.bouncycastle:bcpkix-jdk15on:1.52.classpath"/>
     <path refid="library.org.apache.santuario:xmlsec:1.5.1.classpath"/>
   </path>
   
@@ -196,11 +196,11 @@
     <path refid="library.commons-io:commons-io:2.4.classpath"/>
     <pathelement location="${basedir}/../pdfcorr/build/libs/pdfcorr.jar"/>
     <path refid="library.pdfcorr.classpath"/>
-    <path refid="library.com.itextpdf:itextpdf:5.5.4.classpath"/>
+    <path refid="library.com.itextpdf:itextpdf:5.5.6.classpath"/>
     <path refid="library.org.bouncycastle:bcmail-jdk16:1.46.classpath"/>
-    <path refid="library.org.bouncycastle:bcprov-jdk15on:1.49.classpath"/>
+    <path refid="library.org.bouncycastle:bcprov-jdk15on:1.52.classpath"/>
     <path refid="library.org.bouncycastle:bctsp-jdk16:1.46.classpath"/>
-    <path refid="library.org.bouncycastle:bcpkix-jdk15on:1.49.classpath"/>
+    <path refid="library.org.bouncycastle:bcpkix-jdk15on:1.52.classpath"/>
     <path refid="library.org.apache.santuario:xmlsec:1.5.1.classpath"/>
   </path>
   
@@ -211,11 +211,11 @@
     <path refid="library.commons-io:commons-io:2.4.classpath"/>
     <pathelement location="${basedir}/../pdfcorr/build/libs/pdfcorr.jar"/>
     <path refid="library.pdfcorr.classpath"/>
-    <path refid="library.com.itextpdf:itextpdf:5.5.4.classpath"/>
+    <path refid="library.com.itextpdf:itextpdf:5.5.6.classpath"/>
     <path refid="library.org.bouncycastle:bcmail-jdk16:1.46.classpath"/>
-    <path refid="library.org.bouncycastle:bcprov-jdk15on:1.49.classpath"/>
+    <path refid="library.org.bouncycastle:bcprov-jdk15on:1.52.classpath"/>
     <path refid="library.org.bouncycastle:bctsp-jdk16:1.46.classpath"/>
-    <path refid="library.org.bouncycastle:bcpkix-jdk15on:1.49.classpath"/>
+    <path refid="library.org.bouncycastle:bcpkix-jdk15on:1.52.classpath"/>
     <path refid="library.org.apache.santuario:xmlsec:1.5.1.classpath"/>
   </path>
   
@@ -299,15 +299,15 @@
     <copy file="${basedir}/lib/commons-io-2.4.jar" tofile="${artifact.temp.output.}/commons-io-2.4.jar"/>
     <copy file="${basedir}/../pdfcorr/build/libs/pdfcorr.jar" tofile="${artifact.temp.output.}/pdfcorr.jar"/>
     <copy file="${basedir}/../pdfcorr/build/libs/pdfcorr.jar" tofile="${artifact.temp.output.}/pdfcorr.jar"/>
-    <copy file="${basedir}/lib/itextpdf-5.5.4.jar" tofile="${artifact.temp.output.}/itextpdf-5.5.4.jar"/>
+    <copy file="${basedir}/lib/itextpdf-5.5.6.jar" tofile="${artifact.temp.output.}/itextpdf-5.5.6.jar"/>
     <copy file="${basedir}/lib/bcmail-jdk16-1.46.jar" tofile="${artifact.temp.output.}/bcmail-jdk16-1.46.jar"/>
     <copy file="${basedir}/lib/bcprov-jdk16-1.46.jar" tofile="${artifact.temp.output.}/bcprov-jdk16-1.46.jar"/>
-    <copy file="${basedir}/lib/bcprov-jdk15on-1.49.jar" tofile="${artifact.temp.output.}/bcprov-jdk15on-1.49.jar"/>
+    <copy file="${basedir}/lib/bcprov-jdk15on-1.52.jar" tofile="${artifact.temp.output.}/bcprov-jdk15on-1.52.jar"/>
     <copy file="${basedir}/lib/bctsp-jdk16-1.46.jar" tofile="${artifact.temp.output.}/bctsp-jdk16-1.46.jar"/>
     <copy file="${basedir}/lib/bcprov-jdk16-1.46.jar" tofile="${artifact.temp.output.}/bcprov-jdk16-1.46.jar"/>
     <copy file="${basedir}/lib/bcmail-jdk16-1.46.jar" tofile="${artifact.temp.output.}/bcmail-jdk16-1.46.jar"/>
-    <copy file="${basedir}/lib/bcpkix-jdk15on-1.49.jar" tofile="${artifact.temp.output.}/bcpkix-jdk15on-1.49.jar"/>
-    <copy file="${basedir}/lib/bcprov-jdk15on-1.49.jar" tofile="${artifact.temp.output.}/bcprov-jdk15on-1.49.jar"/>
+    <copy file="${basedir}/lib/bcpkix-jdk15on-1.52.jar" tofile="${artifact.temp.output.}/bcpkix-jdk15on-1.52.jar"/>
+    <copy file="${basedir}/lib/bcprov-jdk15on-1.52.jar" tofile="${artifact.temp.output.}/bcprov-jdk15on-1.52.jar"/>
     <copy file="${basedir}/lib/xmlsec-1.5.1.jar" tofile="${artifact.temp.output.}/xmlsec-1.5.1.jar"/>
     <copy file="${basedir}/lib/commons-logging-1.1.1.jar" tofile="${artifact.temp.output.}/commons-logging-1.1.1.jar"/>
     <fx:fileset id="all_but_" dir="${artifact.temp.output.}" includes="**/*.jar">
@@ -330,8 +330,7 @@
       <fx:application refid="_id"/>
       <fx:bundleArgument arg="mac.CFBundleVersion" value="1.0"/>
       <fx:bundleArgument arg="mac.CFBundleIdentifier" value="com.devcorr.protectorr"/>
-      <fx:bundleArgument arg="mac.category" value="Productivity"/>
-      <fx:bundleArgument arg="mac.bundle-id-signing-prefix" value="8QZAF9V488ID"/>
+      <fx:bundleArgument arg="mac.category" value="public.app-category.productivity"/>
       <fx:resources>
           <fx:fileset dir="${artifact.temp.output.}" includes="*.jar"/>
       </fx:resources>
