@@ -9,8 +9,8 @@ public class PasswordValidator {
     }
 
     public boolean isValidPassword() {
-        if (this.getPassword() != null) {
-            return !(this.getPassword().isEmpty() && this.getPassword().trim().contains(" "));
+        if (this.getPassword() != null && !this.getPassword().isEmpty()) {
+            return !this.getPassword().trim().contains(" ");
         }
         return false;
     }

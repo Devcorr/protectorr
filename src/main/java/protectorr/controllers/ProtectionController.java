@@ -47,7 +47,6 @@ public class ProtectionController {
         PasswordValidator validator = new PasswordValidator(passwordField.getText());
         if (pdfFile != null) {
             if (validator.isValidPassword()) {
-                System.out.println(passwordField.getText() + " " + "is valid.");
                 if (pdfFile.exists()) {
                     try {
                         protectionService.protectPdfDocument(passwordField.getText(), pdfFile);
@@ -61,8 +60,7 @@ public class ProtectionController {
                     }
                 }
             } else {
-                message.setText("The password did not meet the minimum requirements (more than 10 characters and no spaces)");
-                System.out.println(passwordField.getText() + " " + "is invalid.");
+                message.setText("The password did not meet the minimum requirements");
             }
         }
         else {

@@ -328,7 +328,9 @@
              nativeBundles="dmg"
              outdir="${artifact.output.protectorr.dist.dir}" outfile="Protectorr" verbose="true">
       <fx:application refid="_id"/>
-      <fx:bundleArgument arg="mac.CFBundleVersion" value="1.0"/>
+      <fx:bundleArgument arg="appVersion" value="1.0"/>
+      <fx:bundleArgument arg="icon" value="./package/macosx/Protectorr.icns"/>
+      <fx:bundleArgument arg="mac.CFBundleVersion" value="200"/>
       <fx:bundleArgument arg="mac.CFBundleIdentifier" value="com.devcorr.protectorr"/>
       <fx:bundleArgument arg="mac.category" value="public.app-category.productivity"/>
       <fx:resources>
